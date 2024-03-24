@@ -22,9 +22,6 @@ public class TelaLoguin extends JFrame {
 	private JTextField textField_Usuario;
 	private JPasswordField passwordField;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -39,9 +36,6 @@ public class TelaLoguin extends JFrame {
 		});
 	}
 
-	/**
-	 * ' Create the frame.
-	 */
 	public TelaLoguin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 461, 446);
@@ -84,22 +78,21 @@ public class TelaLoguin extends JFrame {
 
 		JButton btnNewButton = new JButton("Next");
 		btnNewButton.addActionListener(new ActionListener() {
-		    public void actionPerformed(ActionEvent e) {
-		       
-		        if (textField_Usuario.getText() != null && !textField_Usuario.getText().isEmpty()
-		                && passwordField.getPassword() != null && passwordField.getPassword().length >= 6) {
-		           
-		            JOptionPane.showMessageDialog(btnNewButton, "Informações válidas");
-		        } else {
-		           
-		            JOptionPane.showMessageDialog(btnNewButton, "Por favor, preencha todos os campos.");
-		        }
-		    }
+			public void actionPerformed(ActionEvent e) {
+
+				if (textField_Usuario.getText() != null && !textField_Usuario.getText().isEmpty()
+						&& passwordField.getPassword() != null && passwordField.getPassword().length >= 6) {
+
+					JOptionPane.showMessageDialog(btnNewButton, "Informações válidas");
+				} else {
+
+					JOptionPane.showMessageDialog(btnNewButton, "Por favor, preencha todos os campos.");
+				}
+			}
 		});
 		btnNewButton.setFont(new Font("Arial Black", Font.BOLD, 20));
 		btnNewButton.setBounds(74, 260, 168, 38);
 		panel.add(btnNewButton);
-
 
 		passwordField = new JPasswordField();
 		passwordField.setBounds(48, 202, 208, 38);
